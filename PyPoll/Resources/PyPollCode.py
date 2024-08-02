@@ -1,11 +1,11 @@
 print("Election Results")
-print("-----------")
+print("-----------------")
 
 import os
 import csv
 import pandas as pd
 
-election_csv=os.path.join('..''PyPoll','Resources','election_data.csv')
+election_csv=os.path.join('PyPoll','Resources','election_data.csv')
 df=pd.read_csv(election_csv)
 
 total_votes = 0
@@ -39,6 +39,5 @@ for candidate_name, votes in candidate_votes.items():
         winner = candidate_name
         winner_votes = votes
 
-print("-----------")
-
+print("-----------------")
 print(f"Winner: {winner}")
